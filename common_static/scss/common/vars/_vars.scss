@@ -1,0 +1,21 @@
+//FONTS
+$font-family: $primary-font;
+
+// screen width sizes
+$hd-min-width: 9900px;
+$hd-lg-min-width: 1920px;
+$hd-md-min-width: 1600px;
+$hd-sm-min-width: 1366px;
+
+$desktop-max-width: $hd-min-width - 1;
+$desktop-min-width: 1025px;
+
+$tablet-max-width: $desktop-min-width - 1 ;
+$tablet-min-width: 200px;
+
+$mobile-max-width: $tablet-min-width - 1;
+$mobile-min-width: 0px;
+
+//  Page width
+$full_page_width: 1154px;
+$full_page_width_reduced: 820px;

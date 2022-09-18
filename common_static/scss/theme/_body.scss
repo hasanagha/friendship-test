@@ -1,0 +1,23 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+    font-family: $font-family;
+    font-weight: 300;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+.container {
+  min-height: 60vh;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

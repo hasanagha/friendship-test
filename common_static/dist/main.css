@@ -1,0 +1,118 @@
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: Montserrat, sans-serif;
+  font-weight: 300; }
+
+h1 {
+  font-weight: 300; }
+
+.container {
+  min-height: 60vh; }
+
+a {
+  color: #3c5093;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.btn {
+  border-radius: 0px;
+  border: 0px solid white;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 10px 20px;
+  line-height: 18px;
+  min-height: 40px;
+  text-transform: uppercase; }
+
+a.btn {
+  text-decoration: none; }
+
+.btn-primary {
+  background-color: #3c5093; }
+  .btn-primary:hover, .btn-primary:focus {
+    background-color: #2d3c6f;
+    opacity: 0.9;
+    color: #FFF; }
+
+.btn-secondary {
+  background: #FFF;
+  color: #222; }
+  .btn-secondary:hover, .btn-secondary:focus {
+    background-color: #e6e6e6;
+    opacity: 0.9; }
+
+nav {
+  padding: 10px; }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    nav ul li {
+      display: inline-block; }
+      nav ul li.link {
+        float: right; }
+      nav ul li a.btn {
+        margin: 20px; }
+
+.card {
+  text-align: center;
+  border-radius: 20px; }
+  .card img {
+    width: 100%;
+    margin-bottom: 10px; }
+  .card p {
+    padding: 0px 0px !important; }
+
+.card-title {
+  font-weight: bold;
+  color: #3c5093;
+  font-size: 12px !important;
+  line-height: 16px;
+  margin-bottom: 2px; }
+
+.card-text {
+  font-weight: 400;
+  line-height: 16px;
+  font-size: 16px;
+  margin-bottom: 12px !important;
+  color: #222; }
+
+.card-body {
+  font-weight: 700;
+  border-radius: 24px;
+  flex: none;
+  padding: 0px; }
+  .card-body .title {
+    font-size: 20px;
+    line-height: 28px; }
+  .card-body p {
+    font-size: 20px; }
+
+footer {
+  background-color: #f4f4f4;
+  color: #3c5093;
+  padding: 20px 40px;
+  text-align: center;
+  font-size: 12px; }
+  footer .container {
+    padding: 40px 0px; }
+  footer p {
+    font-size: 12px; }
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    footer ul li {
+      display: inline-block;
+      margin: 0 10px; }
+  footer p {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    color: #222; }
