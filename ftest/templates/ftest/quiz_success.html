@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="card w-50 m-auto">
+    <h3>Hi {{ object.user.username|title }}, here is a link to your quiz</h3>
+    <p>Copy the link below and share it with your friends.</p>
+    <input type="text" class="form-control quiz-link-field text-center" readonly onclick="this.select();" value="http://{{ request.get_host }}{{ object.get_quiz_url }}" />
+
+</div>
+{% endblock %}

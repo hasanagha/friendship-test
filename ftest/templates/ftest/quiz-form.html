@@ -1,0 +1,24 @@
+<form method="post">
+    {% csrf_token %}
+
+    <label class="label" for="name">What's your name?</label>
+    {{ form.username }}
+    {{ form.username.errors }}
+    <br>
+
+    <label class="label" for="gender">What's your gender?</label>
+    {{ form.gender }}
+    {{ form.gender.errors }}
+    <br>
+
+    {% for item in questions %}
+        <label class="label">{{ forloop.counter }}. {{ item.question }}</label>
+        {% for option in item.options %}
+            <label class="option" for="option-{{ item.pk }}{{ forloop.counter }}">
+                <input type="radio" id="option-{{ item.pk }}{{ forloop.counter }}" name="{{ item.pk }}" value="{{ option }}" /> {{ option }}
+            </label>
+        {% endfor %}
+        <br>
+    {% endfor %}
+    <button class="btn btn-primary mt-5" type="submit">{{ cta_label }}</button>
+</form>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="text-center">
+    <h1>Answer these questions to create your quiz</h1>
+    <h3>Which you can share with your friends</h3>
+
+    <div class="card w-50 m-auto p-7 d-block overflow-hidden mb-5">
+        {% include 'ftest/quiz-form.html' with cta_label="Create my quiz" %}
+    </div>
+{% endblock %}
