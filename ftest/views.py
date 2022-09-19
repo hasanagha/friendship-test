@@ -39,7 +39,7 @@ class CreateQuizView(FormView):
         return HttpResponseRedirect(reverse('ftest:quiz-success', kwargs={'hash': quiz.hashid}))
 
     def get_questions(self, count=10):
-        return Question.objects.filter(active=True).order_by('?')[:count]
+        return Question.objects.filter(active=True).values("id", "question", "options").order_by('?')[:count]
 
 
 class QuizDetailBaseView(DetailView):
@@ -47,7 +47,7 @@ class QuizDetailBaseView(DetailView):
 
     def get_object(self):
         try:
-            return Quiz.objects.get(hashid=self.kwargs['hash'])
+            return Quiz.objects.select_related('user').get(hashid=self.kwargs['hash'])
         except Quiz.DoesNotExist:
             raise Http404
 
@@ -75,7 +75,7 @@ class QuizView(QuizDetailBaseView, FormView):
 
         result = 0
 
-        owner_answers = {str(q.question_id): q.answer for q in quiz.quizquestion_set.all()}
+        owner_answers = {str(q['question_id']): q['answer'] for q in quiz.quizquestion_set.all().values('question_id', 'answer')}
 
         for qid, answer in form_data.items():
             if qid in ['username', 'gender', 'csrfmiddlewaretoken']:
@@ -112,7 +112,7 @@ class QuizView(QuizDetailBaseView, FormView):
             'pk': question.pk,
             'options': question.options,
             'question': question.question_with_template.format(
-                username=quiz.user.username,
+                username=quiz.user.username.title(),
                 pronoun=pronoun
             )
         } for question in quiz.questions.filter(active=True)]
@@ -124,6 +124,6 @@ class QuizSubmissionView(DetailView):
 
     def get_object(self, queryset=None):
         try:
-            return QuizSubmission.objects.get(pk=self.kwargs['pk'], quiz__hashid=self.kwargs['hash'])
+            return QuizSubmission.objects.select_related('quiz').get(pk=self.kwargs['pk'], quiz__hashid=self.kwargs['hash'])
         except QuizSubmission.DoesNotExist:
             raise Http404
