@@ -1,7 +1,7 @@
 from django.db import models
-from django.conf import settings
 from django.urls import reverse
 from django_hashids import HashidsField
+from ftest.constants import GENDER_MALE, GENDER_FEMALE
 
 
 class Question(models.Model):
@@ -24,8 +24,6 @@ class Question(models.Model):
 
 
 class QuizUser(models.Model):
-    GENDER_MALE = 'male'
-    GENDER_FEMALE = 'female'
     GENDER_CHOICES = (
         (GENDER_MALE, 'Male'),
         (GENDER_FEMALE, 'Female'),

@@ -7,7 +7,7 @@
         <div class="card-body">
             <h1>Hi {{ object.user.username|title }}</h1>
 
-            <h3>You know your friend {{ object.quiz.user.username|title }} very well, you answered {{ object.result }}% of all questions like {% if object.quiz.user.gender == 'male' %}him{% else %}her{% endif %}</h3>
+            <h3>You know your friend {{ object.quiz.user.username|title }} very well, you answered {{ object.result }}% of all questions like {% if object.quiz.user.gender == gender_male %}{{ pronoun_male }}{% else %}{{ pronoun_female }}{% endif %}</h3>
 
             <div class="progress">
                 <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{ object.result }}%" aria-valuenow="{{ object.result }}" aria-valuemin="0" aria-valuemax="100"></div>

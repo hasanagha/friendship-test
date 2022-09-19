@@ -1,0 +1,4 @@
+GENDER_MALE = 'male'
+GENDER_FEMALE = 'female'
+PRONOUN_MALE = 'him'
+PRONOUN_FEMALE = 'her'

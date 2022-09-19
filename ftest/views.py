@@ -1,8 +1,10 @@
 from django.views.generic import TemplateView, FormView, DetailView
 from django.http import HttpResponseRedirect, Http404
 from django.urls import reverse
-from .forms import CreateQuizForm
-from .models import Question, Quiz, QuizSubmission, QuizQuestionAnswer
+
+from ftest.constants import PRONOUN_MALE, PRONOUN_FEMALE, GENDER_FEMALE
+from ftest.forms import CreateQuizForm
+from ftest.models import Question, Quiz, QuizSubmission, QuizQuestionAnswer
 
 
 class HomeView(TemplateView):
@@ -105,7 +107,7 @@ class QuizView(QuizDetailBaseView, FormView):
 
     def get_questions(self):
         quiz = self.object
-        pronoun = 'her' if quiz.user.gender == 'female' else 'him'
+        pronoun = PRONOUN_FEMALE if quiz.user.gender == GENDER_FEMALE else PRONOUN_MALE
 
         return [{
             'id': question.pk,
