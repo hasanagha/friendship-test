@@ -3,7 +3,7 @@
 ## Setting up a local build
 In order to run this on your local, follow these steps
 ```
-1. Rename template.env on project roo to .env
+1. Rename template.env on project root to .env
 2. In .env, add database credentials
 3. run "python manage.py migrate" in shell.
 4. run "python manage.py load_sample_questions" in shell to load sample data.
@@ -33,3 +33,8 @@ Friends: What is John's favorite color?
 ```
 
 Since we have all the necessary information, this can be further extended to show user his friend/s submissions as well.
+
+I've also added a migration script with sample json file to get 20 sample questions
+```bash
+python manage.py load_sample_questions
+```
