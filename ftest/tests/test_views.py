@@ -1,7 +1,3 @@
-import json
-
-from django.urls import reverse
-from django.conf import settings
 from django.test import TestCase
 
 from ftest.models import *
@@ -10,9 +6,6 @@ from ftest.views import CreateQuizView, QuizView
 
 class TestViews(TestCase):
     def setUp(self):
-        self.user_1 = QuizUser.objects.create(username='john', gender='male')
-        self.user_2 = QuizUser.objects.create(username='nina', gender='female')
-
         sample_json = [
             {"question": "Q1", "options": ["A1-1", "A1-2"]},
             {"question": "Q2", "options": ["A2-1", "A2-2"]},
@@ -24,10 +17,6 @@ class TestViews(TestCase):
         self.q2 = Question.objects.create(question=sample_json[1]['question'], options=sample_json[1]['options'])
         self.q3 = Question.objects.create(question=sample_json[2]['question'], options=sample_json[2]['options'])
         self.q4 = Question.objects.create(question=sample_json[3]['question'], options=sample_json[3]['options'])
-
-        self.quiz = Quiz.objects.create(user=self.user_1)
-        self.quiz.questions.add(self.q1, through_defaults={'answer': 'A1-1'})
-        self.quiz.questions.add(self.q2, through_defaults={'answer': 'A2-1'})
 
     def test_questions_from_db(self):
         """
@@ -64,7 +53,7 @@ class TestViews(TestCase):
 
         self.assertEqual(50, r)
 
-    def test_quiz_calculation_25_percent(self):
+    def test_quiz_calculation_100_percent(self):
         r = QuizView.get_results(self, total_matched=4, total_questions=4)
 
         self.assertEqual(100, r)
