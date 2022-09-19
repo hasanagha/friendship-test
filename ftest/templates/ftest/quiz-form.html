@@ -14,8 +14,8 @@
     {% for item in questions %}
         <label class="label">{{ forloop.counter }}. {{ item.question }}</label>
         {% for option in item.options %}
-            <label class="option" for="option-{{ item.pk }}{{ forloop.counter }}">
-                <input type="radio" id="option-{{ item.pk }}{{ forloop.counter }}" name="{{ item.pk }}" value="{{ option }}" /> {{ option }}
+            <label class="option" for="option-{{ item.id }}{{ forloop.counter }}">
+                <input type="radio" id="option-{{ item.id }}{{ forloop.counter }}" name="{{ item.id }}" value="{{ option }}" /> {{ option }}
             </label>
         {% endfor %}
         <br>
