@@ -15,7 +15,7 @@ class CreateQuizView(FormView):
 
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
-        ctx['questions'] = Question.objects.filter(active=True).order_by('?')[:2]
+        ctx['questions'] = Question.objects.filter(active=True).order_by('?')[:10]
 
         return ctx
 
