@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from ftest.models import *
+from ftest.models import Question
 from ftest.views import CreateQuizView, QuizView
 
 

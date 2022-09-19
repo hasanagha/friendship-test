@@ -1,6 +1,6 @@
 import json
-
 from django.core.management import BaseCommand
+
 from ftest.models import Question
 
 

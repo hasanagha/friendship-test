@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django_hashids import HashidsField
+
 from ftest.constants import GENDER_MALE, GENDER_FEMALE
 
 

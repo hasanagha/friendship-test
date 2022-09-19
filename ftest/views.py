@@ -1,9 +1,9 @@
-from django.views.generic import TemplateView, FormView, DetailView
-from django.http import HttpResponseRedirect, Http404
 from django.urls import reverse
+from django.http import HttpResponseRedirect, Http404
+from django.views.generic import TemplateView, FormView, DetailView
 
-from ftest.constants import PRONOUN_MALE, PRONOUN_FEMALE, GENDER_FEMALE
 from ftest.forms import CreateQuizForm
+from ftest.constants import PRONOUN_MALE, PRONOUN_FEMALE, GENDER_FEMALE
 from ftest.models import Question, Quiz, QuizSubmission, QuizQuestionAnswer
 
 
