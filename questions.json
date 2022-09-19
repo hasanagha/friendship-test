@@ -1,0 +1,81 @@
+[{
+    "question": "What do you find the most attractive in opposite sex?",
+    "question_with_template": "What does {username} find the most attractive in opposite sex?",
+    "options": ["Face", "Eyes", "Hands", "Body", "Character"]
+}, {
+    "question": "What kind of places would you like to travel the most?",
+    "question_with_template": "What kind of places would {username} like to travel the most?",
+    "options": ["The mountains", "Rivers", "Beaches", "Exotic places", "Historical cities"]
+}, {
+    "question": "How would you describes yourself?",
+    "question_with_template": "How would {username} describes {pronoun}self?",
+    "options": ["Friendly", "Creative", "Thoughtful", "Open-minded", "Genius"]
+}, {
+    "question": "What kind of food do you like the most?",
+    "question_with_template": "What kind of food does {username} likes the most?",
+    "options": ["Traditional", "Continental", "Sweets", "Healthy", "Vegan"]
+}, {
+    "question": "What is your zodiac sign?",
+    "question_with_template": "What is {username}'s zodiac sign?",
+    "options": ["Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Saggitarius", "Capricorn"]
+}, {
+    "question": "What's your favorite genre in music?",
+    "question_with_template": "What is {username}'s favorite genre in music?",
+    "options": ["Rock", "Pop", "Classic", "Metal", "Techno"]
+}, {
+    "question": "What you do when you're bored?",
+    "question_with_template": "What does {username} do when {pronoun} is bored?",
+    "options": ["Watch TV", "Play video games", "Read books", "House chores", "Do nothing"]
+}, {
+    "question": "Which brand phone do you have?",
+    "question_with_template": "Which brand phone does {username} have?",
+    "options": ["Apple", "Samsung", "Huawei", "Nokia", "Oppo"]
+}, {
+    "question": "How do you usually commute?",
+    "question_with_template": "How does {username} usually commute?",
+    "options": ["Bus", "Car", "Bike", "On foot", "Metro"]
+}, {
+    "question": "What type of clothing do you like the most?",
+    "question_with_template": "What type of clothing does {username} like the most?",
+    "options": ["Trendy", "Simple", "Crazy", "Shabby", "Traditional"]
+}, {
+    "question": "What is your eye color?",
+    "question_with_template": "What is {username}'s eye color?",
+    "options": ["Brown", "Blue", "Green", "Grey", "Black"]
+}, {
+    "question": "What's your favorite color?",
+    "question_with_template": "What is {username}'s favorite color?",
+    "options": ["Pink", "White", "Black", "Orange", "Red", "Blue", "Green", "Grey", "Yellow", "Violet"]
+}, {
+    "question": "What's the most valuable thing to you?",
+    "question_with_template": "What's the most valuable thing to {username}?",
+    "options": ["Money", "Status", "Love", "Friendship", "Power"]
+}, {
+    "question": "Preferred mode of transport?",
+    "question_with_template": "Preferred mode of transport?",
+    "options": ["By air", "By road", "By sea"]
+}, {
+    "question": "What's your relationship status?",
+    "question_with_template": "What is {username}'s relationship status?",
+    "options": ["In a relationship", "Engaged", "Married", "Divorced", "Widowed"]
+}, {
+    "question": "What's your favorite subject?",
+    "question_with_template": "What is {username}'s favorite subject?",
+    "options": ["Maths", "History", "Sports", "Physics", "Geography"]
+}, {
+    "question": "What's your hair color?",
+    "question_with_template": "What is {username}'s hair color?",
+    "options": ["Brown", "Black", "Blonde", "White", "Grey"]
+}, {
+    "question": "Which brand's laptop do you own?",
+    "question_with_template": "Which brand's laptop do {username} own?",
+    "options": ["Apple", "HP", "Microsoft", "Huawei", "Lenovo", "IBM", "Acer"]
+}, {
+    "question": "What's your favorite country to visit?",
+    "question_with_template": "What is {username}'s favorite country to visit?",
+    "options": ["Mauritius", "Germany", "France", "Switzerland", "Iceland", "Maldives"]
+}, {
+    "question": "What's your favorite drink?",
+    "question_with_template": "What is {username}'s favorite drink?",
+    "options": ["Coffee", "Wine", "Cocktails", "Mocktails", "I don't drink"]
+}]
