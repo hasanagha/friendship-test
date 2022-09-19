@@ -1,6 +1,6 @@
 .btn {
-    border-radius: 0px;
-    border: 0px solid white;
+    border-radius: 0;
+    border: 0 solid white;
     color: white;
     font-family: $font-family;
     font-style: normal;
@@ -10,8 +10,13 @@
     line-height: 18px;
     min-height: 40px;
     text-transform: uppercase;
+    @include breakpoint(mobile) {
+      font-size: 12px;
+      padding: 5px 10px;
+      min-height: auto;
+    }
   }
-  
+
   a.btn {
     text-decoration: none;
   }
@@ -32,5 +37,3 @@
       opacity: 0.9;
     }
   }
-
-  

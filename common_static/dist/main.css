@@ -18,8 +18,8 @@ a {
     text-decoration: underline; }
 
 .btn {
-  border-radius: 0px;
-  border: 0px solid white;
+  border-radius: 0;
+  border: 0 solid white;
   color: white;
   font-family: Montserrat, sans-serif;
   font-style: normal;
@@ -29,6 +29,11 @@ a {
   line-height: 18px;
   min-height: 40px;
   text-transform: uppercase; }
+  @media (max-width: 767px) {
+    .btn {
+      font-size: 12px;
+      padding: 5px 10px;
+      min-height: auto; } }
 
 a.btn {
   text-decoration: none; }
@@ -59,6 +64,11 @@ nav {
         float: right; }
       nav ul li a.btn {
         margin: 20px; }
+    @media (max-width: 767px) {
+      nav ul li.logo img {
+        width: 100px; }
+      nav ul li.link a {
+        margin: 5px; } }
 
 .card {
   text-align: center;
@@ -68,7 +78,10 @@ nav {
     width: 100%;
     margin-bottom: 10px; }
   .card p {
-    padding: 0px 0px !important; }
+    padding: 0 !important; }
+  @media (max-width: 767px) {
+    .card.w-50 {
+      width: 100% !important; } }
 
 .card-title {
   font-weight: bold;
@@ -88,7 +101,7 @@ nav {
   font-weight: 700;
   border-radius: 24px;
   flex: none;
-  padding: 0px; }
+  padding: 0; }
   .card-body .title {
     font-size: 20px;
     line-height: 28px; }
@@ -97,7 +110,7 @@ nav {
 
 form label {
   display: block;
-  margin: 10px 0 5px 0px;
+  margin: 10px 0 5px 0;
   text-align: left; }
   form label.label {
     font-weight: bold; }
