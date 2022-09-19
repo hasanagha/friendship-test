@@ -25,6 +25,8 @@ python3 manage.py test ftest.tests --settings=app.test_settings
 ```
 
 ## Notes
+
+#### Questions mapping
 I've added question template mapping as well where user and friends will see same question in different way.
 for example:
 ```
@@ -32,9 +34,13 @@ User: What is your favorite color?
 Friends: What is John's favorite color?
 ```
 
+#### Sample Data
 Since we have all the necessary information, this can be further extended to show user his friend/s submissions as well.
 
 I've also added a migration script with sample json file to get 20 sample questions
 ```bash
 python manage.py load_sample_questions
 ```
+
+#### SCSS
+I've added gulp configuration `./fe_compilers/gulp` to compile scss files and compress the main stylesheet.
