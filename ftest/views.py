@@ -15,7 +15,7 @@ class CreateQuizView(FormView):
 
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
-        ctx['questions'] = Question.objects.filter(active=True).order_by('?')[:10]
+        ctx['questions'] = self.get_questions()
 
         return ctx
 
@@ -37,6 +37,9 @@ class CreateQuizView(FormView):
         quiz.save()
 
         return HttpResponseRedirect(reverse('ftest:quiz-success', kwargs={'hash': quiz.hashid}))
+
+    def get_questions(self, count=10):
+        return Question.objects.filter(active=True).order_by('?')[:count]
 
 
 class QuizDetailBaseView(DetailView):
@@ -90,12 +93,15 @@ class QuizView(QuizDetailBaseView, FormView):
                 result += 1
 
         if result:
-            quiz_submission.result = round(result / len(owner_answers) * 100)
+            quiz_submission.result = self.get_results(result, len(owner_answers))
             quiz_submission.save()
 
         return HttpResponseRedirect(
             reverse('ftest:quiz-submission', kwargs={'hash': quiz.hashid,
                                                      'pk': quiz_submission.pk}))
+
+    def get_results(self, total_matched, total_questions):
+        return round(total_matched / total_questions * 100)
 
     def get_questions(self):
         quiz = self.object
