@@ -1,13 +1,35 @@
 # Friendship Test Web App
 
 ## Setting up a local build
+In order to run this on your local, follow these steps
+```
+1. Rename template.env on project roo to .env
+2. In .env, add database credentials
+3. run "python manage.py migrate" in shell.
+4. run "python manage.py load_sample_questions" in shell to load sample data.
+5. Finally, run the server. "python manage.py runserver"
+```
+## Usage
+The homepage contains link to create a quiz.
 
-## API Usage
+1. User can click on that to start creating a quiz.
+2. Backend will select 10 random questions from database
+3. After a successful submission, user will get a unique link
+4. Friends can open user's unique quiz link and answer the questions
+5. After successful submission, app will show the percentage of answers got matched with the quiz owner's answer
 
 ## Running Tests
 To run test cases, use the following in shell
 ```bash
-python manage.py test 
+python3 manage.py test ftest.tests --settings=app.test_settings
 ```
 
 ## Notes
+I've added question template mapping as well where user and friends will see same question in different way.
+for example:
+```
+User: What is your favorite color?
+Friends: What is John's favorite color?
+```
+
+Since we have all the necessary information, this can be further extended to show user his friend/s submissions as well.
